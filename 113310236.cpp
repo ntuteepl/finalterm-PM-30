@@ -314,7 +314,7 @@ void Team::combat(Monster* m)
                     }
                 } else {
                     if(members[i]->getid() == 3 && members[i]->getHP() > 0 && aliveCount > 0){
-                        members[i]->setHP(members[i]->getHP+monsterAttack);
+                        members[i]->setHP(members[i]->getHP()+monsterAttack);
                     }
                     members[i]->setHP(members[i]->getHP() - monsterAttack);  // 普通攻擊
                 }
@@ -482,8 +482,7 @@ int main()
             break;
         default:
             cout << "恭喜觸發唯一隱藏職業<哥布林>\n";
-            cout << "當你隊友陣亡時你就會變得更強\n";
-            cout << "並且當你所有隊友死亡時你才會受到傷害\n";
+            cout << "當你所有隊友死亡時你才會受到傷害\n";
             myTeam.addBolean(name , 1);
     } 
     myTeam.print();
